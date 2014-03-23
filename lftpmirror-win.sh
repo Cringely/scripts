@@ -58,12 +58,12 @@ echo ""
             ./lftp.exe sftp://$usrpw@$site -e "set sftp:connect-program './ssh.exe'; mirror -R --verbose --use-pget-n=8 -c '$localpath' '$remotepath''; quit"
             ;;
         "lftp")
-            lftp
+            ./lftp
             ;;
         "lget")
 	    echo "url to download"
 	    read down
-	    lftp -e 'pget -n 5 '$down' && exit'
+	    ./lftp -e 'pget -n 5 '$down' && exit'
             echo "done. check your script directory"
             ;;
         "Quit")
