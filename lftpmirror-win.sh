@@ -19,7 +19,6 @@ select opt in "${options[@]}"
 do
     case $opt in
         "mirrorfrom")
-            clear
 echo ""
 echo "####> Nwgat LFTP Mirror Script <####"
 echo "http://nwgat.net / contact@nwgat.net"
@@ -39,7 +38,6 @@ echo ""
             ./lftp.exe sftp://$usrpw@$site -e "set sftp:connect-program './ssh.exe'; mirror --verbose --use-pget-n=8 -c '$remotepath' '$localpath'; quit"
             ;;
         "mirrorto")
-            clear
 echo ""
 echo "####> Nwgat LFTP Mirror Script <####"
 echo "http://nwgat.net / contact@nwgat.net"
@@ -58,7 +56,7 @@ echo ""
             ./lftp.exe sftp://$usrpw@$site -e "set sftp:connect-program './ssh.exe'; mirror -R --verbose --use-pget-n=8 -c '$localpath' '$remotepath''; quit"
             ;;
         "lftp")
-            ./lftp
+            ./lftp -e "set sftp:connect-program './ssh.exe'"
             ;;
         "lget")
 	    echo "url to download"
