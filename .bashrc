@@ -1,4 +1,4 @@
 alias ls='ls -lrth'
 alias df='df -h'
-alias mv='mv -p'
-alias cp='cp -p'
+alias mv='mv -g'
+alias cp='cp -g'
