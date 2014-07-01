@@ -1,0 +1,3 @@
+#!/bin/sh
+ip link set dev $INTERFACE up
+ip a add 10.0.0.10/32 dev $INTERFACE
