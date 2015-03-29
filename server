@@ -1,5 +1,0 @@
-Name = server
-AddressFamily = ipv4
-Interface = tun0
-Address = yourpublicip
-Subnet = 10.0.0.1/32
