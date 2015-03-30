@@ -1,5 +1,5 @@
 echo "### Nwgat NodejS-rTorrent Installer ###"
-
+echo "not finished working on it..."
 echo "Username (user@domain)"
 read user
 
