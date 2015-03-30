@@ -41,8 +41,8 @@ su rtorrent -c "cd /home/rtorrent/nodejs-rtorrent && npm install"
 echo ""
 echo "NodeJS-rTorrent Installed"
 echo ""
-wget https://raw.githubusercontent.com/nwgat/supervisor-configs/master/rtorrent.conf -o /etc/supervisor/conf.d/rtorre$
-wget https://raw.githubusercontent.com/nwgat/supervisor-configs/master/nodejs-rtorrent.conf -o /etc/supervisor/conf.d$
+wget https://raw.githubusercontent.com/nwgat/supervisor-configs/master/rtorrent.conf -o /etc/supervisor/conf.d/rtorrent.conf
+wget https://raw.githubusercontent.com/nwgat/supervisor-configs/master/nodejs-rtorrent.conf -o /etc/supervisor/conf.d/njr.conf
 echo "chown=rtorrent:rtorrent" >> /etc/supervisor/supervisord.conf
 service supervisor start
 supervisorctl status
