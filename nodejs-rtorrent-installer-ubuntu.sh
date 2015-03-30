@@ -28,7 +28,7 @@ echo ""
 echo "rTorrent Configured"
 echo ""
 git clone https://github.com/roastlechon/nodejs-rtorrent.git /home/rtorrent/nodejs-rtorrent
-mv /home/rtorrent/nodejs-rtorrent/src/node/config/config.json  
+mv /home/rtorrent/nodejs-rtorrent/src/node/config/config.json /home/rtorrent/nodejs-rtorrent/src/node/config/config.json.bak
 curl -o /home/rtorrent/nodejs-rtorrent/src/node/config/config.json 
 
 sed -i 's/userhost/'$host'/g' /home/rtorrent/nodejs-rtorrent/src/node/config/config.json
