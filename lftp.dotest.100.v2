@@ -32,7 +32,7 @@ echo "Digitalocean (Singapore, Asia)"
 lftp -e 'pget http://ipv4.speedtest-sgp1.digitalocean.com/100mb.test -o test.sgp1.100 && exit'
 echo ""
 echo ""
-echo "Network Benchmark Score: (Combined Bandwidth)"
+echo "Network Benchmark Score: (score is calulated from all the servers, the higher, the better)"
 cat doresults.txt | awk '/second/ {print $7;}' | awk -F\( '{gsub("[,)]", " ", $NF); print $NF}' | awk '{for (i=1; i<=NF; i++) s=s+$i}; END{print s}'
 echo ""
 
