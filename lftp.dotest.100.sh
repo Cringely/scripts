@@ -23,7 +23,7 @@ echo ""
 echo "Digitalocean (London, Europe)"
 lftp -e 'pget http://ipv4.speedtest-lon1.digitalocean.com/100mb.test -o test.lon1.100 && exit'
 echo ""
-echo "Digitalocean (France, Europe)"
+echo "Digitalocean (Francefort, Germany)"
 lftp -e 'pget http://ipv4.speedtest-fra1.digitalocean.com/100mb.test -o test.fra1.100 && exit'
 echo ""
 echo "Digitalocean (Singapore, Asia)"
