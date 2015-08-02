@@ -19,13 +19,13 @@ read vq
 echo "Video Complexity (0-10, where 10 is best quality)"
 read vz
 
-read -p "Do you want a uncompressed video + png frame file? (y/n) " dump
+read -p "Do you want a uncompressed video, png frame, a png frame of source video file? (y/n)? " dump
 if [ "$dump" = "y" ]; then
 echo ""
 ./encoder_example -S $skip -l $limit -v $vq -z $vz $file -o $file.v$vq.z$vz.ogv
-#./encoder_example -v $vq -z $vz $file -o $file.v$vq.z$vz.ogv
 ./dump_video $file.v$vq.z$vz.ogv -o $file.v$vq.z$vz.ogv.y4m
 ffmpeg -i $file.v$vq.z$vz.ogv.y4m -f image2 -t 0.001 -vframes 1 $file.v$vq.z$vz.ogv.y4m.png
+ffmpeg -i $file -f image2 -vf select="gte(n\, $skip)" -vframes 1 $file.src.png
 else
 echo ""
 ./encoder_example -S $skip -l $limit -v $vq -z $vz $file -o $file.v$vq.z$vz.ogv
