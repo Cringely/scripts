@@ -22,6 +22,7 @@ goto :no
 encoder_example.exe -S %skip% -l %limit% -v %vq% -z %vz% %file% -o %file%.v%vq%.z%vz%.ogv
 dump_video.exe %file%.v%vq%.z%vz%.ogv -o %file%.v%vq%.z%vz%.ogv.y4m
 ffmpeg.exe -i %file%.v%vq%.z%vz%.ogv.y4m -f image2 -t 0.001 -vframes 1 %file%.v%vq%.z%vz%.ogv.y4m.png
+ffmpeg -i %file% -f image2 -vf select="gte(n\, %skip%)" -vframes 1 %file%.src.png
 
 exit /b 0 
 
