@@ -13,7 +13,7 @@ set /p vz= Video Complexity (0-10, where 10 is best quality)
 echo %vz%
 
 
-SET /P ANSWER=Do you want a uncompressed video + png frame file? (y/n)? 
+SET /P ANSWER=Do you want a uncompressed video, png frame, a png frame of source video? file? (y/n)? 
 echo You chose: %ANSWER% 
 if /i {%ANSWER%}=={y} (goto :yes) 
 if /i {%ANSWER%}=={yes} (goto :yes) 
