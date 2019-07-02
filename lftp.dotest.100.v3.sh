@@ -16,7 +16,7 @@ echo ""
 echo "Digitalocean SFO1 (San Fransisco, United States)"
 lftp -e 'pget -n 10  http://ipv4.speedtest-sfo1.digitalocean.com/1gb.test -o test.sfo1.1000 && exit'
 echo "Digitalocean SFO2 (San Fransisco, United States)"
-lftp -e 'pget -n 10  http://ipv4.speedtest-sfo2.digitalocean.com/1gb.test -o test.sfo1.1000 && exit'
+lftp -e 'pget -n 10  http://ipv4.speedtest-sfo2.digitalocean.com/1gb.test -o test.sfo2.1000 && exit'
 echo ""
 echo "Digitalocean AMS2 (Amsterdam, Europe)"
 lftp -e 'pget -n 10  http://ipv4.speedtest-ams2.digitalocean.com/1gb.test -o test.ams2.1000 && exit'
